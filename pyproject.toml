@@ -1,0 +1,39 @@
+[project]
+name = "highrev-exercise"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "dvc==3.67.1",
+    "kedro==1.7.0",
+    "kedro-datasets[json-jsondataset,pandas-csvdataset,pandas-parquetdataset,pickle-pickledataset]==9.6.0",
+    "matplotlib>=3.11.2",
+    "mlflow==3.16.1",
+    "numpy>=2.5.4",
+    "pandas>=3.1.1",
+    "scikit-learn>=1.9.1",
+    "user-agents>=2.2.0",
+]
+
+
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["highrev*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+
+[tool.kedro]
+package_name = "highrev"
+project_name = "HighRev"
+kedro_init_version = "1.7.0"
+source_dir = "src"
+
+[tool.kedro_telemetry]
+project_id = "456b8af26c8a4245bfe7f2a0816e2e57"

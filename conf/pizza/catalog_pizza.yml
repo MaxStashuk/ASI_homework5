@@ -1,0 +1,21 @@
+# Copy into conf/pizza; Kedro overlays this environment on the existing base.
+pizza_orders:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/orders.csv
+
+pizza_restaurants:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/restaurants.csv
+
+pizza_results:
+  type: pandas.CSVDataset
+  filepath: data/08_reporting/pizza_comparison.csv
+  save_args:
+    index: false
+
+pizza_models:
+  type: pickle.PickleDataset
+  filepath: data/06_models/pizza_models.pickle
+
+# pizza_features and pizza_split are implicit MemoryDataset intermediates.
+

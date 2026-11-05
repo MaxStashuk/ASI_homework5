@@ -1,0 +1,49 @@
+# the baseline writes its artifact here; the course will give it a better home (sessions 4 and 6)
+model.pickle
+
+# environments and caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+
+# quality checks 
+.ruff_chache
+.venv-*/
+
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+data/02_intermediate/
+data/03_primary/
+data/06_models/
+data/08_reporting/
+
+# session 5
+data/01_raw/
+mlflow.db*
+mlruns/
+mlartifacts/
+.lesson05/
+.viz/
+logs/
+
+# bonus task snippet
+/.venv/
+**/__pycache__/
+/mlflow.db*
+/mlruns/
+/mlartifacts/
+/data/06_models/
+/data/08_reporting/
+/logs/
+/build/
+
